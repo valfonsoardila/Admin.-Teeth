@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Paciente
+    public class Paciente: Persona
     {
+        public List<Cita> Citas { get; set; }
+        public List<Pago> Pagos { get; set; }
     }
 }

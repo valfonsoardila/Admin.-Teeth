@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Odontologo
+    public class Odontologo : Persona
     {
+        public string IdHorario { get; set; }
+        public List<string> Citas { get; set; }
     }
 }

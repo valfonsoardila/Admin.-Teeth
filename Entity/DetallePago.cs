@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class DetallePago
+    public class DetallePago
     {
+        public string Id { get; set; }
+        public string IdPago { get; set; }
+        public double Total { get; set; }
+        public double SubTotal { get; set; }
+        public double Iva { get; set; }
     }
 }

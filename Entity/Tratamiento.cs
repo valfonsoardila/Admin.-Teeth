@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Tratamiento
+    public class Tratamiento
     {
+        public string Id { get; set; }
+        public string Nombre { get; set; }
+        public List<Observacion> Observaciones { get; set; }
     }
 }

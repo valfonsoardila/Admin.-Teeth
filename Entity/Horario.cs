@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Horario
+    public class Horario
     {
+        public string id { get; set; }
+        public string nombre { get; set; }
     }
 }
