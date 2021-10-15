@@ -11,5 +11,6 @@ namespace Entity
         public string Id { get; set; }
         public string Nombre { get; set; }
         public List<Observacion> Observaciones { get; set; }
+        public double Valor { get; set; }
     }
 }

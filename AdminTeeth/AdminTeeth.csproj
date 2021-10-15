@@ -54,6 +54,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarPaciente.Designer.cs">
+      <DependentUpon>RegistrarPaciente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +71,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrarPaciente.resx">
+      <DependentUpon>RegistrarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,6 +98,120 @@
       <Project>{53db815e-6f7c-4184-a942-e2050c664649}</Project>
       <Name>Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904677-add-addition-calculate-charge-create-new-plus_122527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_icon-icons.com_64876.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins-stacks-money_icon-icons.com_56191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card-with-check-symbol_icon-icons.com_56181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-coin-money_icon-icons.com_56177.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel_office_4658.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-back_97586.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-search_97602.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-tick_97659.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-username_97587.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-writing-on-a-paper-sheet_icon-icons.com_70422.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-with-an-arrow_icon-icons.com_56122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store_icon-icons.com_56116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_84308.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1487086345-cross_81577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-graph1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health-PNG-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health-PNG-Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-book %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo de proyecto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

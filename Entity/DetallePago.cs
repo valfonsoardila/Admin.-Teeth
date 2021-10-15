@@ -10,8 +10,18 @@ namespace Entity
     {
         public string Id { get; set; }
         public string IdPago { get; set; }
-        public double Total { get; set; }
-        public double SubTotal { get; set; }
-        public double Iva { get; set; }
+        public string IdTratamiento { get; set; }
+        public double Valor { get; set; }
+
+        public DetallePago()
+        {
+
+        }
+
+        public DetallePago(Tratamiento tratamiento)
+        {
+            IdTratamiento = tratamiento.Id;
+            Valor = tratamiento.Valor;
+        }
     }
 }
