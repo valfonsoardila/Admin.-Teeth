@@ -15,7 +15,7 @@ namespace AdminTeeth
     {
         int lx, ly;
         int sw, sh;
-        int cantidadFormularios = 1;
+        int cantidadFormularios = 6;
         private int tolerance = 12;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
@@ -63,7 +63,6 @@ namespace AdminTeeth
             pictureBox3.Visible = true;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            
         }
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
@@ -139,15 +138,22 @@ namespace AdminTeeth
                 case 1:
                     CerrarFormulario<RegistrarPaciente>();
                     break;
-            //    case 2:
-            //        CerrarFormulario<Registrar>();
-            //        break;
-            //    case 3:
-            //        CerrarFormulario<InfoUsuario>();
-            //        break;
-            //    case 4:
-            //        CerrarFormulario<CarteraInforme>();
-            //        break;
+                case 2:
+                    CerrarFormulario<RegistrarOdontologo>();
+                    break;
+                case 3:
+                    CerrarFormulario<ConsultarCita>();
+                    break;
+                case 4:
+                    CerrarFormulario<ConsultarOdontologo>();
+                    break;
+                case 5:
+                    CerrarFormulario<ConsultarPaciente>();
+                    break;
+
+                case 6:
+                    CerrarFormulario<RegistrarCita>();
+                    break;
             }
         }
         private void CerrarFormulariosCiclo()
@@ -162,6 +168,36 @@ namespace AdminTeeth
         {
             CerrarFormulariosCiclo();
             AbrirFormulario<RegistrarPaciente>();
+        }
+
+        private void BtnConsultarPaciente_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<ConsultarPaciente>();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<RegistrarOdontologo>();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<ConsultarOdontologo>();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<RegistrarCita>();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<ConsultarCita>();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

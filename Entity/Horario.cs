@@ -8,7 +8,7 @@ namespace Entity
 {
     public class Horario
     {
-        public string id { get; set; }
-        public string nombre { get; set; }
+        public string Id { get; set; }
+        public string Nombre { get; set; }
     }
 }

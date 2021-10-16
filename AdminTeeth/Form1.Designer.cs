@@ -30,30 +30,31 @@ namespace AdminTeeth
         private void InitializeComponent()
         {
             this.PnlContenedor = new System.Windows.Forms.Panel();
-            this.PnlTitulo = new System.Windows.Forms.Panel();
-            this.PnlMenu = new System.Windows.Forms.Panel();
             this.PnlContenedorInterno = new System.Windows.Forms.Panel();
-            this.BtnRegistrarPaciente = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.PnlMenu = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnConsultarPaciente = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnRegistrarPaciente = new System.Windows.Forms.Button();
+            this.PnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnMaximizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.PnlContenedor.SuspendLayout();
-            this.PnlTitulo.SuspendLayout();
             this.PnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.PnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
@@ -73,23 +74,20 @@ namespace AdminTeeth
             this.PnlContenedor.Size = new System.Drawing.Size(988, 497);
             this.PnlContenedor.TabIndex = 0;
             // 
-            // PnlTitulo
+            // PnlContenedorInterno
             // 
-            this.PnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.PnlTitulo.Controls.Add(this.pictureBox3);
-            this.PnlTitulo.Controls.Add(this.BtnMinimizar);
-            this.PnlTitulo.Controls.Add(this.BtnMaximizar);
-            this.PnlTitulo.Controls.Add(this.BtnCerrar);
-            this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.PnlTitulo.Name = "PnlTitulo";
-            this.PnlTitulo.Size = new System.Drawing.Size(988, 28);
-            this.PnlTitulo.TabIndex = 0;
-            this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
+            this.PnlContenedorInterno.BackColor = System.Drawing.SystemColors.Control;
+            this.PnlContenedorInterno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlContenedorInterno.Location = new System.Drawing.Point(200, 28);
+            this.PnlContenedorInterno.Name = "PnlContenedorInterno";
+            this.PnlContenedorInterno.Size = new System.Drawing.Size(788, 469);
+            this.PnlContenedorInterno.TabIndex = 2;
             // 
             // PnlMenu
             // 
             this.PnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(179)))), ((int)(((byte)(166)))));
+            this.PnlMenu.Controls.Add(this.panel7);
+            this.PnlMenu.Controls.Add(this.button1);
             this.PnlMenu.Controls.Add(this.panel6);
             this.PnlMenu.Controls.Add(this.button4);
             this.PnlMenu.Controls.Add(this.panel5);
@@ -108,95 +106,59 @@ namespace AdminTeeth
             this.PnlMenu.Size = new System.Drawing.Size(200, 469);
             this.PnlMenu.TabIndex = 1;
             // 
-            // PnlContenedorInterno
+            // panel6
             // 
-            this.PnlContenedorInterno.BackColor = System.Drawing.SystemColors.Control;
-            this.PnlContenedorInterno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlContenedorInterno.Location = new System.Drawing.Point(200, 28);
-            this.PnlContenedorInterno.Name = "PnlContenedorInterno";
-            this.PnlContenedorInterno.Size = new System.Drawing.Size(788, 469);
-            this.PnlContenedorInterno.TabIndex = 2;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.panel6.Location = new System.Drawing.Point(0, 272);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 30);
+            this.panel6.TabIndex = 11;
             // 
-            // BtnRegistrarPaciente
+            // button4
             // 
-            this.BtnRegistrarPaciente.BackColor = System.Drawing.Color.Transparent;
-            this.BtnRegistrarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnRegistrarPaciente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BtnRegistrarPaciente.FlatAppearance.BorderSize = 0;
-            this.BtnRegistrarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.BtnRegistrarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.BtnRegistrarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRegistrarPaciente.ForeColor = System.Drawing.Color.White;
-            this.BtnRegistrarPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnRegistrarPaciente.Location = new System.Drawing.Point(11, 128);
-            this.BtnRegistrarPaciente.Name = "BtnRegistrarPaciente";
-            this.BtnRegistrarPaciente.Size = new System.Drawing.Size(190, 30);
-            this.BtnRegistrarPaciente.TabIndex = 2;
-            this.BtnRegistrarPaciente.Text = "Registrar Paciente";
-            this.BtnRegistrarPaciente.UseVisualStyleBackColor = false;
-            this.BtnRegistrarPaciente.Click += new System.EventHandler(this.BtnRegistrarPaciente_Click);
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.Location = new System.Drawing.Point(10, 272);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(190, 30);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Registrar Cita";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // panel2
+            // panel5
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(0, 128);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 30);
-            this.panel2.TabIndex = 3;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.panel5.Location = new System.Drawing.Point(0, 236);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 30);
+            this.panel5.TabIndex = 9;
             // 
-            // panel1
+            // button3
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.panel1.Location = new System.Drawing.Point(-98, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 30);
-            this.panel1.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(-88, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Registrar Paciente";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.panel3.Location = new System.Drawing.Point(0, 200);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 30);
-            this.panel3.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(10, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Registrar Odontologo";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(10, 236);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(190, 30);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Consultar Odontologo";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
@@ -223,6 +185,84 @@ namespace AdminTeeth
             this.BtnConsultarPaciente.TabIndex = 6;
             this.BtnConsultarPaciente.Text = "Consultar Paciente";
             this.BtnConsultarPaciente.UseVisualStyleBackColor = false;
+            this.BtnConsultarPaciente.Click += new System.EventHandler(this.BtnConsultarPaciente_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.panel3.Location = new System.Drawing.Point(0, 200);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 30);
+            this.panel3.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(10, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 30);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Registrar Odontologo";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Location = new System.Drawing.Point(0, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 30);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.panel1.Location = new System.Drawing.Point(-98, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 30);
+            this.panel1.TabIndex = 5;
+            // 
+            // BtnRegistrarPaciente
+            // 
+            this.BtnRegistrarPaciente.BackColor = System.Drawing.Color.Transparent;
+            this.BtnRegistrarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRegistrarPaciente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnRegistrarPaciente.FlatAppearance.BorderSize = 0;
+            this.BtnRegistrarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.BtnRegistrarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.BtnRegistrarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegistrarPaciente.ForeColor = System.Drawing.Color.White;
+            this.BtnRegistrarPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnRegistrarPaciente.Location = new System.Drawing.Point(7, 128);
+            this.BtnRegistrarPaciente.Name = "BtnRegistrarPaciente";
+            this.BtnRegistrarPaciente.Size = new System.Drawing.Size(190, 30);
+            this.BtnRegistrarPaciente.TabIndex = 2;
+            this.BtnRegistrarPaciente.Text = "Registrar Paciente";
+            this.BtnRegistrarPaciente.UseVisualStyleBackColor = false;
+            this.BtnRegistrarPaciente.Click += new System.EventHandler(this.BtnRegistrarPaciente_Click);
+            // 
+            // PnlTitulo
+            // 
+            this.PnlTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.PnlTitulo.Controls.Add(this.pictureBox3);
+            this.PnlTitulo.Controls.Add(this.BtnMinimizar);
+            this.PnlTitulo.Controls.Add(this.BtnMaximizar);
+            this.PnlTitulo.Controls.Add(this.BtnCerrar);
+            this.PnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlTitulo.Location = new System.Drawing.Point(0, 0);
+            this.PnlTitulo.Name = "PnlTitulo";
+            this.PnlTitulo.Size = new System.Drawing.Size(988, 28);
+            this.PnlTitulo.TabIndex = 0;
+            this.PnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlTitulo_MouseDown);
             // 
             // pictureBox1
             // 
@@ -284,57 +324,32 @@ namespace AdminTeeth
             this.BtnCerrar.TabStop = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // panel5
+            // panel7
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.panel5.Location = new System.Drawing.Point(0, 236);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 30);
-            this.panel5.TabIndex = 9;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.panel7.Location = new System.Drawing.Point(0, 308);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 30);
+            this.panel7.TabIndex = 13;
             // 
-            // button3
+            // button1
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(10, 236);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 30);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Consultar Odontologo";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.panel6.Location = new System.Drawing.Point(0, 272);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 30);
-            this.panel6.TabIndex = 11;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(10, 272);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 30);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Registrar Cita";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(36)))), ((int)(((byte)(156)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(10, 308);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 30);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Consultar Cita";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -347,9 +362,9 @@ namespace AdminTeeth
             this.Name = "Form1";
             this.Text = "Form1";
             this.PnlContenedor.ResumeLayout(false);
-            this.PnlTitulo.ResumeLayout(false);
             this.PnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.PnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
@@ -362,7 +377,6 @@ namespace AdminTeeth
         #endregion
 
         private System.Windows.Forms.Panel PnlContenedor;
-        private System.Windows.Forms.Panel PnlContenedorInterno;
         private System.Windows.Forms.Panel PnlMenu;
         private System.Windows.Forms.Panel PnlTitulo;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -377,11 +391,13 @@ namespace AdminTeeth
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel PnlContenedorInterno;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button1;
     }
 }
 

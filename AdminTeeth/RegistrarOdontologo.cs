@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdminTeeth
 {
-    public partial class RegistrarPaciente : Form
+    public partial class RegistrarOdontologo : Form
     {
-        public RegistrarPaciente()
+        public RegistrarOdontologo()
         {
             InitializeComponent();
         }
@@ -22,24 +22,9 @@ namespace AdminTeeth
             this.Close();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }

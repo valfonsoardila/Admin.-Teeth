@@ -14,7 +14,7 @@ namespace Entity
         public double SubTotal { get; set; }
         public double TotalIva { get; set; }
         public double Iva { get; set; }
-        public string IdCliente { get; set; }
+        public string IdPaciente { get; set; }
         public string IdCita { get; set; }
         public List<DetallePago> Detalles { get; set; }
 
@@ -25,7 +25,7 @@ namespace Entity
 
         public Pago(List<Tratamiento> tratamientos, Paciente paciente)
         {
-            IdCliente = paciente.Identificacion;
+            IdPaciente = paciente.Identificacion;
             Detalles = new List<DetallePago>();
             Fecha = DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy"));
             Iva = 19;
