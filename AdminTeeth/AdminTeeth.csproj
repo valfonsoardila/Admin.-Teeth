@@ -34,7 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,13 +62,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgendarCita.Designer.cs">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigConection.cs" />
     <Compile Include="ConsultarCita.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultarCita.Designer.cs">
       <DependentUpon>ConsultarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarObservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarObservaciones.Designer.cs">
+      <DependentUpon>ConsultarObservaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultarOdontologo.cs">
       <SubType>Form</SubType>
@@ -64,19 +96,25 @@
     <Compile Include="ConsultarPaciente.Designer.cs">
       <DependentUpon>ConsultarPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrarCita.cs">
+    <Compile Include="RegistrarObservaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarCita.Designer.cs">
-      <DependentUpon>RegistrarCita.cs</DependentUpon>
+    <Compile Include="RegistrarObservaciones.Designer.cs">
+      <DependentUpon>RegistrarObservaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrarOdontologo.cs">
       <SubType>Form</SubType>
@@ -84,14 +122,20 @@
     <Compile Include="RegistrarOdontologo.Designer.cs">
       <DependentUpon>RegistrarOdontologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrarPaciente.cs">
+    <Compile Include="RegistrarPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarPaciente.Designer.cs">
-      <DependentUpon>RegistrarPaciente.cs</DependentUpon>
+    <Compile Include="RegistrarPacientes.Designer.cs">
+      <DependentUpon>RegistrarPacientes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgendarCita.resx">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarCita.resx">
       <DependentUpon>ConsultarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarObservaciones.resx">
+      <DependentUpon>ConsultarObservaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarOdontologo.resx">
       <DependentUpon>ConsultarOdontologo.cs</DependentUpon>
@@ -99,8 +143,8 @@
     <EmbeddedResource Include="ConsultarPaciente.resx">
       <DependentUpon>ConsultarPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,15 +156,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegistrarCita.resx">
-      <DependentUpon>RegistrarCita.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarObservaciones.resx">
+      <DependentUpon>RegistrarObservaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarOdontologo.resx">
       <DependentUpon>RegistrarOdontologo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarPaciente.resx">
-      <DependentUpon>RegistrarPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarPacientes.resx">
+      <DependentUpon>RegistrarPacientes.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -257,6 +307,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo de proyecto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

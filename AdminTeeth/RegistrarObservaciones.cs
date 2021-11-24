@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdminTeeth
 {
-    public partial class RegistrarCita : Form
+    public partial class RegistrarObservaciones : Form
     {
-        public RegistrarCita()
+        public RegistrarObservaciones()
         {
             InitializeComponent();
         }

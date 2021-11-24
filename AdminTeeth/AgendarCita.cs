@@ -10,22 +10,13 @@ using System.Windows.Forms;
 
 namespace AdminTeeth
 {
-    public partial class ConsultarCita : Form
+    public partial class AgendarCita : Form
     {
-        public ConsultarCita()
+        public AgendarCita()
         {
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
         private void BtnVolver_Click(object sender, EventArgs e)
         {
             this.Close();

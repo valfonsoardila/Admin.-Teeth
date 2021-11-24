@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AdminTeeth
 {
-    public partial class Form1 : Form
+    public partial class MenuPrincipal : Form
     {
         int lx, ly;
         int sw, sh;
@@ -20,10 +20,11 @@ namespace AdminTeeth
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
-        public Form1()
+        public MenuPrincipal()
         {
             InitializeComponent();
             Inicializar();
+            hideSubMenu();
         }
         private void Inicializar()
         {
@@ -136,7 +137,7 @@ namespace AdminTeeth
             switch (FormularioCerrar)
             {
                 case 1:
-                    CerrarFormulario<RegistrarPaciente>();
+                    CerrarFormulario<RegistrarPacientes>();
                     break;
                 case 2:
                     CerrarFormulario<RegistrarOdontologo>();
@@ -152,7 +153,7 @@ namespace AdminTeeth
                     break;
 
                 case 6:
-                    CerrarFormulario<RegistrarCita>();
+                    CerrarFormulario<RegistrarObservaciones>();
                     break;
             }
         }
@@ -163,38 +164,91 @@ namespace AdminTeeth
                 CerrarFormularioSwicth(i);
             }
         }
-
-        private void BtnRegistrarPaciente_Click(object sender, EventArgs e)
+        //Propiedades del menu
+        private void hideSubMenu()
+        {
+            panelGestionarPaciente.Visible = false;
+            panelGestionarOdontologo.Visible = false;
+            panelGestionarCita.Visible = false;
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        //Boton Gestionar Paciente
+        private void btnGestionarPacinte_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelGestionarPaciente);
+            panelSelectorGestionarPaciente.Location = btnGestionarPacinte.Location;
+            panelSelectorGestionarPaciente.Visible = true;
+            panelSelectorGestionarOdontologo.Visible = false;
+            panelSelectorGestionarCita.Visible = false;
+        }
+        private void btnRegistrarPaciente_Click(object sender, EventArgs e)
         {
             CerrarFormulariosCiclo();
-            AbrirFormulario<RegistrarPaciente>();
+            AbrirFormulario<RegistrarPacientes>();
         }
-
-        private void BtnConsultarPaciente_Click(object sender, EventArgs e)
+        private void btnConsultarPaciente_Click_1(object sender, EventArgs e)
         {
             CerrarFormulariosCiclo();
             AbrirFormulario<ConsultarPaciente>();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnConsutarObservacionesPaciente_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<ConsultarObservaciones>();
+        }
+        //Boton Gestionar Odontologo
+        private void btnGestionarOdontologo_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelGestionarOdontologo);
+            panelSelectorGestionarOdontologo.Location = btnGestionarOdontologo.Location;
+            panelSelectorGestionarOdontologo.Visible = true;
+            panelSelectorGestionarPaciente.Visible = false;
+            panelSelectorGestionarCita.Visible = false;
+        }
+        private void btnRegistrarOdontologo_Click(object sender, EventArgs e)
         {
             CerrarFormulariosCiclo();
             AbrirFormulario<RegistrarOdontologo>();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnConsultarOdontologo_Click(object sender, EventArgs e)
         {
             CerrarFormulariosCiclo();
             AbrirFormulario<ConsultarOdontologo>();
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnRegistrarObservacion_Click(object sender, EventArgs e)
         {
             CerrarFormulariosCiclo();
-            AbrirFormulario<RegistrarCita>();
+            AbrirFormulario<RegistrarObservaciones>();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConsutarObservacionesOdontologo_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<ConsultarObservaciones>();
+        }
+        //Boton Gestionar Cita
+        private void btnGestionarCita_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelGestionarCita);
+            panelSelectorGestionarCita.Location = btnGestionarCita.Location;
+            panelSelectorGestionarCita.Visible = true;
+            panelSelectorGestionarPaciente.Visible = false;
+            panelSelectorGestionarOdontologo.Visible = false;
+        }
+        private void btnAgendarCita_Click(object sender, EventArgs e)
+        {
+            CerrarFormulariosCiclo();
+            AbrirFormulario<AgendarCita>();
+        }
+        private void btnConsultarCita_Click(object sender, EventArgs e)
         {
             CerrarFormulariosCiclo();
             AbrirFormulario<ConsultarCita>();
